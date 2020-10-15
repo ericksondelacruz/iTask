@@ -27,7 +27,7 @@ const  FlowForm = ({
   const buttonText = formType === "create" ? "Create Flow" : "Update Flow";
 
   // set the form header
-  const header = formTitle ? <div className="formHeader"><h2> {formTitle} </h2><hr/></div> : <div/>;
+  const header = formTitle ? <div style={{color: '#54596d'}} className="formHeader"><h2> {formTitle} </h2><hr/></div> : <div/>;
 
   return (
     <div className="yt-container">
@@ -53,8 +53,38 @@ const  FlowForm = ({
             />
             <div className="input-group">
               <div className="yt-row space-between">
-                <Link className="yt-btn link" to={cancelLink}>Cancel</Link>
-                <button className="yt-btn " type="submit" > {buttonText} </button>
+                <Link
+                   style={{
+                    backgroundColor: '#EDEFF7',
+                    color: '#4864E6',
+                    padding: 5,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                    borderRadius: '5px',
+                    marginBottom: '10px',
+                    border: '1px solid #EDEFF7',
+                    fontWeight: 'bold'
+                  }}  
+                  to={cancelLink}
+                >
+                  Cancel
+                </Link>
+                <button
+                  style={{
+                    backgroundColor: '#4864E6',
+                    color: '#EDEFF7',
+                    padding: 5,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                    borderRadius: '5px',
+                    marginBottom: '10px',
+                    border: '1px solid #4864E6',
+                    fontWeight: 'bold'
+                  }} 
+                  type="submit" 
+                > 
+                  {buttonText} 
+                </button>
               </div>
             </div>
           </form>

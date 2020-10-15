@@ -22,6 +22,7 @@ import Binder from '../../../global/components/Binder.js.jsx';
 // import resource components
 import NoteForm from '../components/NoteForm.js.jsx';
 import NoteLayout from '../components/NoteLayout.js.jsx';
+import apiUtils from '../../../global/utils/api';
 
 class CreateNote extends Binder {
   constructor(props) {
@@ -113,7 +114,8 @@ const mapStoreToProps = (store) => {
   // manipulate store items here
 
   return {
-    defaultNote: store.note.defaultItem
+    defaultNote: store.note.defaultItem,
+    noteStore : store.note
   }
 }
 

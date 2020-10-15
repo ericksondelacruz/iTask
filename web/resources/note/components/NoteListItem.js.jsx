@@ -8,7 +8,7 @@ const NoteListItem = ({
 }) => {
   return (
     <li>
-      <Link to={`/notes/${note._id}`}> {note.name}</Link>
+      <Link to={`/notes/${note._id}`}> {note.content}</Link>
     </li>
   )
 }

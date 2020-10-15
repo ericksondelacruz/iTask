@@ -30,7 +30,7 @@ class TextInput extends Binder {
     } = this.props;
     return (
       <div className="input-group">
-        <label htmlFor={name}> {label} {required ? <sup className="-required">*</sup> : null}</label>
+        <label style={{color: '#54596d'}} htmlFor={name}> {label} {required ? <sup className="-required">*</sup> : null}</label>
         <input
           disabled={disabled}
           name={name}

@@ -28,7 +28,7 @@ const  TaskForm = ({
   const buttonText = formType === "create" ? "Create Task" : "Update Task";
 
   // set the form header
-  const header = formTitle ? <div className="formHeader"><h2> {formTitle} </h2><hr/></div> : <div/>;
+  const header = formTitle ? <div style={{color: '#54596d'}} className="formHeader"><h2> {formTitle} </h2><hr/></div> : <div/>;
 
   return (
     <div className="yt-container">
@@ -53,11 +53,54 @@ const  TaskForm = ({
             <div className="input-group">
               <div className="yt-row space-between">
                 { !cancelAction ?
-                  <Link className="yt-btn link" to={cancelLink}>Cancel</Link>
+                  <Link 
+                    style={{
+                      backgroundColor: '#EDEFF7',
+                      color: '#4864E6',
+                      padding: 5,
+                      paddingLeft: 10,
+                      paddingRight: 10,
+                      borderRadius: '5px',
+                      marginBottom: '10px',
+                      border: '1px solid #EDEFF7',
+                      fontWeight: 'bold'
+                    }} 
+                    to={cancelLink}
+                  >
+                    Cancel
+                  </Link>
                   :
-                  <button className="yt-btn link" onClick={cancelAction}>Cancel</button>
+                  <button 
+                    style={{
+                      backgroundColor: '#EDEFF7',
+                      color: '#4864E6',
+                      padding: 5,
+                      paddingLeft: 10,
+                      paddingRight: 10,
+                      borderRadius: '5px',
+                      marginBottom: '10px',
+                      border: '1px solid #EDEFF7',
+                      fontWeight: 'bold'
+                    }} 
+                    onClick={cancelAction}
+                  >
+                    Cancel
+                  </button>
                 }
-                <button className="yt-btn " type="submit" > {buttonText} </button>
+                <button 
+                  style={{
+                    backgroundColor: '#4864E6',
+                    color: '#EDEFF7',
+                    padding: 5,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                    borderRadius: '5px',
+                    marginBottom: '10px',
+                    border: '1px solid #4864E6',
+                    fontWeight: 'bold'
+                  }} 
+                  type="submit" 
+                > {buttonText} </button>
               </div>
             </div>
           </form>
